@@ -3,9 +3,10 @@ import styles from './Modal.module.css';
 
 export interface IModal {
   visible: boolean;
+  children: React.ReactNode;
 }
 
-const Modal = ({ visible }: IModal) => {
+const Modal = ({ visible, children }: IModal) => {
   return (
     <div style={{ display: visible ? 'flex' : 'none' }} className={styles.main_block}>
       <div className={styles.modal}>
@@ -26,6 +27,7 @@ const Modal = ({ visible }: IModal) => {
             </svg>
           </button>
         </div>
+        <div>{children}</div>
       </div>
     </div>
   );

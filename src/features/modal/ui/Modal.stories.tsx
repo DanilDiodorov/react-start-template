@@ -12,5 +12,6 @@ export default meta;
 export const Default = {
   args: {
     visible: true,
+    children: 'Children',
   },
 };
