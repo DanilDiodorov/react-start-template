@@ -37,10 +37,6 @@
   margin-top: 5px;
 }
 
-.button {
-  margin-top: 20px;
-}
-
 .desc {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -49,4 +45,5 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin-top: 5px;
+  margin-bottom: 20px;
 }

@@ -17,9 +17,7 @@ const ProductCard = ({ title, desc, price, image_url }: IProductCard) => {
         <div className={styles.price}>{price} ₽</div>
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.desc}>{desc}</div>
-        <div className={styles.button}>
-          <AddToCartButton count={0} />
-        </div>
+        <AddToCartButton count={0} />
       </div>
     </article>
   );
