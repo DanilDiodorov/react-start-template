@@ -1,11 +1,22 @@
 import React from 'react';
 import styles from './Header.module.css';
-import Logo from '../../shared/logo/Logo';
+import Logo from 'src/shared/logo/Logo';
+import { Container } from 'src/shared/container/Container';
+import { ChangeLanguage } from 'src/features/change-language';
+import { ThemeToggler } from 'src/features/theme-toggler';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Logo />
+      <Container>
+        <div className={styles.content}>
+          <Logo />
+          <div>
+            <ChangeLanguage />
+            <ThemeToggler />
+          </div>
+        </div>
+      </Container>
     </header>
   );
 };

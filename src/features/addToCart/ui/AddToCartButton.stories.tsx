@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/react';
 import AddToCartButton from './AddToCartButton';
+import 'src/app/index.css';
 
 const meta: Meta<typeof AddToCartButton> = {
   title: 'AddToCartButton',

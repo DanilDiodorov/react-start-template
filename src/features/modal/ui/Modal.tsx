@@ -4,15 +4,16 @@ import styles from './Modal.module.css';
 export interface IModal {
   visible: boolean;
   children: React.ReactNode;
+  setVisibale: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Modal = ({ visible, children }: IModal) => {
+const Modal = ({ visible, children, setVisibale }: IModal) => {
   return (
     <div style={{ display: visible ? 'flex' : 'none' }} className={styles.main_block}>
       <div className={styles.modal}>
         <div className={styles.modal_header}>
           <div></div>
-          <button className={styles.close_button}>
+          <button onClick={() => setVisibale(false)} className={styles.close_button}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
