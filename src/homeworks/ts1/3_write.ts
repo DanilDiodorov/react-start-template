@@ -94,6 +94,10 @@ type Profit = {
   type: 'Profit';
 };
 
+function getRandomArbitrary(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 export const createRandomProduct = (createdAt: string): Product => {
   const names: string[] = ['Смартфон', 'Телевизор', 'Хлеб', 'Мышка', 'Рулет', 'Пакет', 'Шоколад'];
   const categories: Category[] = [
@@ -112,14 +116,14 @@ export const createRandomProduct = (createdAt: string): Product => {
       name: 'Прочее',
     },
   ];
-  const id: number = Math.random() * 1000;
-  const name: string = names[Math.random() * names.length - 1];
-  const category: Category = categories[Math.random() * categories.length - 1];
-  const isDesc: boolean = Math.random() * 100 > 50;
-  const isOldPrice: boolean = Math.random() * 100 > 50;
-  const desc = isDesc ? 'Описание' : undefined;
-  const oldPrice = isOldPrice ? Math.random() * 10000 : undefined;
-  const price = Math.random() * 10000;
+  const id: number = getRandomArbitrary(0, 100000);
+  const name: string = names[getRandomArbitrary(0, names.length - 1)];
+  const category: Category = categories[getRandomArbitrary(0, categories.length - 1)];
+  const isDesc: boolean = Math.round(Math.random()) * 100 > 50;
+  const isOldPrice: boolean = Math.round(Math.random()) * 100 > 50;
+  const desc = isDesc ? 'Описание' : 'Нет описания';
+  const oldPrice = isOldPrice ? Math.round(Math.random()) * 10000 : undefined;
+  const price = Math.round(Math.random() * 10000);
   const product: Product = {
     id: id.toString(),
     name,

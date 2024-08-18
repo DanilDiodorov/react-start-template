@@ -7,7 +7,12 @@ const ModalWithButton = () => {
 
   return (
     <>
-      <Modal setVisibale={setOpen} visible={open}>
+      <Modal
+        onClose={() => {
+          setOpen(false);
+        }}
+        visible={open}
+      >
         {text}
       </Modal>
       <input type="text" value={text} onChange={(e) => setText(e.target.value)} />

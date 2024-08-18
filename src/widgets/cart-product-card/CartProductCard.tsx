@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CartProductCard.module.css';
-import AddToCartButton from '../../features/addToCart/ui/AddToCartButton';
+import AddToCartButton from '../../features/add-to-cart/ui/AddToCartButton';
 
 export interface ICartProductCard {
   title: string;
